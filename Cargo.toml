@@ -1,0 +1,15 @@
+[package]
+edition = "2021"
+name = "rust-dlc-wasm"
+version = "0.1.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dlc = {version = "0.1.0", features = ["use-serde"], git = "https://github.com/p2pderivatives/rust-dlc", branch = "fix/serde-serialization"}
+serde = {version = "1.0", default-features = false}
+wasm-bindgen = {version = "0.2", features = ["serde-serialize"]}
+
+# new material
+[lib]
+crate-type = ["cdylib", "rlib"]
