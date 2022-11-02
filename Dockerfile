@@ -9,4 +9,4 @@ RUN apt-get install -y clang
 COPY . .
 RUN cargo update
 RUN cargo build
-CMD [ "wasm-pack", "build" ]
+CMD [ "wasm-pack", "build", "--target", "nodejs" ]

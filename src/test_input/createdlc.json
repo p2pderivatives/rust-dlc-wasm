@@ -1,0 +1,50 @@
+{
+  "offerParams": {
+    "fundPubkey": "03e045d4eadad170beca91c64a1a2e76a836182432abb424bcbcec14deb3781a82",
+    "changeScriptPubkey": "001469f8af7cf3b561e41e7ef0032557f452aebe0633",
+    "changeSerialId": 13075808468807326000,
+    "payoutScriptPubkey": "00140264c2688054a5d8a5e5b5f4024e4ced9ccb6c1e",
+    "payoutSerialId": 17511200914940953000,
+    "inputs": [
+      {
+        "outpoint": "ef473690275ab85725eecd80a20bcf57f18145b67e9f489a4d710888cccca9ec:0",
+        "maxWitnessLen": 107,
+        "redeemScript": "",
+        "serialId": 13693013670150700000,
+        "amount": 5000000000
+      }
+    ],
+    "inputAmount": 5000000000,
+    "collateral": 100000000
+  },
+  "acceptParams": {
+    "fundPubkey": "03b58124331454da3c5a602af5cdd861dc0aa940a379b45644fa0fd9b038b64d13",
+    "changeScriptPubkey": "001479d7c54ef9b8e2b306e1001a21e295a9a3ab62e6",
+    "changeSerialId": 6458770708012595,
+    "payoutScriptPubkey": "0014fcf1f1f1ba526df7aee624aa06e36ecf6b32e37f",
+    "payoutSerialId": 8154230299503257,
+    "inputs": [
+      {
+        "outpoint": "1a9dccde39405a8cdc0e1f5f255e3ea914f41703bfb1a1c41726d5f8498fa104:0",
+        "redeemScript": "",
+        "maxWitnessLen": 107,
+        "serialId": 5136480839432127,
+        "address": "bcrt1qfg8cj8zup89ut8z0x9pkj4gwy9aq6rdtknuk0h",
+        "amount": 2500000000
+      }
+    ],
+    "collateral": 100000000,
+    "inputAmount": 2500000000
+  },
+  "payouts": [
+    { "offer": 200000000, "accept": 0 },
+    { "offer": 0, "accept": 200000000 },
+    { "offer": 200000000, "accept": 0 },
+    { "offer": 0, "accept": 200000000 }
+  ],
+  "refundLockTime": 1661819304,
+  "feeRatePerVb": 2,
+  "fundLockTime": 0,
+  "cetLockTime": 0,
+  "fundOutputSerialId": 7726617541533923000
+}

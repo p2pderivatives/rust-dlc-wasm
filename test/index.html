@@ -1,0 +1,86 @@
+<!DOCTYPE 
+
+html
+
+><html>
+
+  <head>
+
+    <meta charset="utf-8" />
+
+    <title>hello-wasm example</title>
+
+  </head>
+
+  <body>
+
+    HLSAH
+    <script type="module">
+
+      import init, { create_dlc_transactions } from "./pkg/rust_dlc_wasm.js";
+
+      init().then(() => {
+
+        var req = 
+{
+  "offerParams": {
+    "fundPubkey": "02855e68dab0b3a3f6b36359f1c15a8245bd8f6066f1216a5db79071f6c3400195",
+    "changeScriptPubkey": "0014d100b81f7154e332173997d34c9a2db2f9d328ec",
+    "changeSerialId": 1,
+    "payoutScriptPubkey": "0014b113cefe262f3b544aa7d5a7bf6a5c47e956e52f",
+    "payoutSerialId": 1,
+    "inputs": [
+      {
+        "outpoint": "5df6e0e2761359d30a8275058e299fcc0381534545f55cf43e41983f5d4c9456:1",
+        "maxWitnessLen": 108,
+        "redeemScript": "",
+        "serialId": 1
+      }
+    ],
+    "inputAmount": 1000000000,
+    "collateral": 100000000
+  },
+  "acceptParams": {
+    "fundPubkey": "037b47b77a07db2adc7bb619c00d93a5ca087e5a7647c24de428fa53c430a3596c",
+    "changeScriptPubkey": "00143fcadf580c8998be19b500e028a786ce8bee1fe3",
+    "changeSerialId": 1,
+    "payoutScriptPubkey": "001450828e84b3964b0bb9987a483cc395f3ca30425f",
+    "payoutSerialId": 1,
+    "inputs": [
+      {
+        "outpoint": "5df6e0e2761359d30a8275058e299fcc0381534545f55cf43e41983f5d4c9456:1",
+        "maxWitnessLen": 108,
+        "redeemScript": "",
+        "serialId": 1
+      }
+    ],
+    "inputAmount": 1000000000,
+    "collateral": 100000000
+  },
+  "payouts": [
+    {
+      "offer": 200000000,
+      "accept": 0
+    },
+    {
+      "offer": 0,
+      "accept": 200000000
+    }
+  ],
+  "refundLockTime": 100,
+  "feeRatePerVb": 4,
+  "fundLockTime": 10,
+  "cetLockTime": 10,
+  "fundOutputSerialId": 0
+};
+
+    var res = create_dlc_transactions(req);
+    console.log(res);
+
+      });
+
+    </script>
+
+  </body></html>
+
+Copy
